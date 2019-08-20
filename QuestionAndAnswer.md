@@ -41,9 +41,8 @@ class Dog extends Animal {
 Array | ArrayList
 ------------ | -------------
 Array có kích thước cố định. Không thể thay đổi kích thước nếu nó đã được tạo. | đổi kích thước nếu nó đã được tạo.
-Kích thước của ArrayList có thể thay đổi được. Kích thước của nó tự tăng (50% kích thước hiện có) nếu thêm một phần tử vượt quá sức chứa (compacity) hiện có của nó.
-Có thể lưu trữ dữ liệu kiểu nguyên thủy và đối tượng. | Chỉ có thể lưu trữ dữ liệu kiểu đối tượng (Object). Kể từ Java 5, kiểu nguyên thủy được tự động chuyển đổi trong các đối tượng được gọi là auto-boxing. Ví dụ: không thể khai báo ArrayList<int>
-Kích thước của Array có thể được kiểm tra bằng thuộc tính length.
+Kích thước của ArrayList có thể thay đổi được. Kích thước của nó tự tăng (50% kích thước hiện có) nếu thêm một phần tử vượt quá sức chứa  hiện có của nó.Có thể lưu trữ dữ liệu kiểu nguyên thủy và đối tượng. | Chỉ có thể lưu trữ dữ liệu kiểu đối tượng (Object). Kể từ Java 5, kiểu nguyên thủy được tự động chuyển đổi trong các đối tượng được gọi là auto-boxing. Ví dụ: không thể khai báo ArrayList<int>
+Kích thước của Array có thể được kiểm tra bằng thuộc tính length. | Kích thước của ArrayList được kiểm tra bằng phương thức size().
 Sử dụng for hoặc for-each để duyệt qua các phần tử của mảng. | Tương tự như Array, có thể duyệt qua các phần tử bằng lệnh for hoặc for-each. Tuy nhiên, nó có thể duyệt qua Iterator hoặc ListIterator. (https://gpcoder.com/2576-list-interface-trong-java/#ListIterator_Interface)
 Kích thước của Array có thể được kiểm tra bằng thuộc tính length. | Kích thước của ArrayList được kiểm tra bằng phương thức size().
 Không hỗ trợ kiểu Generic | Hỗ trợ kiểu Generic (https://viettuts.vn/java-new-features/generics-trong-java)

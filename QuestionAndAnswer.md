@@ -81,3 +81,50 @@ public class ArrayExample {
 Kết quả thực thi chương trình trên:
 
 **Size : 6**
+
+## Sự khác nhau giữa String và StringBuffer trong java
+
+String | StringBuffer
+------------ | -------------
+Lớp String là bất biến (immutable). | Lớp StringBuffer là có thể sửa đổi (mutable).
+Khi bạn thực hiện nối nhiều chuỗi thì lớp String xử lý chậm và tốn nhiều bộ nhớ hơn, bởi vì mỗi lần nối thêm chuỗi nó tạo ra instance mới. | Khi bạn thực hiện nối nhiều chuỗi thì lớp StringBuffer xử lý nhanh và tốn ít bộ nhớ hơn.
+Lớp String ghi đề phương thức equals() của lớp Object. Vì thế bạn có thể so sánh nội dung của 2 chuỗi bằng phương thức equals(). | Lớp StringBuffer không ghi đề phương thức equals() của lớp Object.
+
+###Test hiệu suất của String và StringBuffer
+```
+public class ConcatTest {
+    public static String concatWithString() {
+        String t = "Java";
+        for (int i = 0; i < 10000; i++) {
+            t = t + "Hello";
+        }
+        return t;
+    }
+ 
+    public static String concatWithStringBuffer() {
+        StringBuffer sb = new StringBuffer("Java");
+        for (int i = 0; i < 10000; i++) {
+            sb.append("Hello");
+        }
+        return sb.toString();
+    }
+ 
+    public static void main(String[] args) {
+        long startTime = System.currentTimeMillis();
+        concatWithString();
+        System.out.println("Thời gian nối chuỗi của lớp String: "
+                + (System.currentTimeMillis() - startTime) + "ms");
+        startTime = System.currentTimeMillis();
+        concatWithStringBuffer();
+        System.out.println("Thời gian nối chuỗi của lớp StringBuffer: "
+                + (System.currentTimeMillis() - startTime) + "ms");
+    }
+}
+
+```
+
+Output
+
+***Thời gian nối chuỗi của lớp String: 350ms
+Thời gian nối chuỗi của lớp StringBuffer: 1ms
+***

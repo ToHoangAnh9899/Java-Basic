@@ -48,3 +48,36 @@ Sử dụng for hoặc for-each để duyệt qua các phần tử của mảng.
 Kích thước của Array có thể được kiểm tra bằng thuộc tính length. | Kích thước của ArrayList được kiểm tra bằng phương thức size().
 Không hỗ trợ kiểu Generic | Hỗ trợ kiểu Generic (https://viettuts.vn/java-new-features/generics-trong-java)
 Các phần tử được thêm vào danh sách bằng lệnh gán. | Các phần tử được thêm vào danh sách bằng phương thức add().
+
+### Ví dụ
+Khởi tạo một mảng có 5 phần tử: bạn không thể thêm phần tử thứ 6 vào mảng hoặc thay đổi kích thước của nó.
+
+```
+int []arr = new int[5];
+ 
+arr[5] = 6;
+```
+Khi thực thi chương trình trên, bạn sẽ gặp lỗi **java.lang.ArrayIndexOutOfBoundsException.**
+
+Tuy nhiên, đối với ArrayList không bị giới hạn về số lượng phần tử. Khi vượt quá kích thước khởi tạo, nó tự động tăng lên 50% để lưu thêm phần tử mới.
+
+```
+import java.lang.reflect.Field;
+import java.util.ArrayList;
+ 
+public class ArrayExample {
+    public static void main(String[] args) throws Exception {
+        ArrayList<String> list = new ArrayList<>(5);
+        list.add("Item01");
+        list.add("Item02");
+        list.add("Item03");
+        list.add("Item04");
+        list.add("Item05");
+        list.add("Item06");
+        System.out.format("Size: %d", list.size());
+    }
+}
+```
+Kết quả thực thi chương trình trên:
+
+**Size : 6**

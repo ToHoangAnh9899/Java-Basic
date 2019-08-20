@@ -90,7 +90,7 @@ Lớp String là bất biến (immutable). | Lớp StringBuffer là có thể s�
 Khi bạn thực hiện nối nhiều chuỗi thì lớp String xử lý chậm và tốn nhiều bộ nhớ hơn, bởi vì mỗi lần nối thêm chuỗi nó tạo ra instance mới. | Khi bạn thực hiện nối nhiều chuỗi thì lớp StringBuffer xử lý nhanh và tốn ít bộ nhớ hơn.
 Lớp String ghi đề phương thức equals() của lớp Object. Vì thế bạn có thể so sánh nội dung của 2 chuỗi bằng phương thức equals(). | Lớp StringBuffer không ghi đề phương thức equals() của lớp Object.
 
-###Test hiệu suất của String và StringBuffer
+### Test hiệu suất của String và StringBuffer
 ```
 public class ConcatTest {
     public static String concatWithString() {
@@ -125,6 +125,5 @@ public class ConcatTest {
 
 Output
 
-***Thời gian nối chuỗi của lớp String: 350ms
-Thời gian nối chuỗi của lớp StringBuffer: 1ms
-***
+**Thời gian nối chuỗi của lớp String: 350ms
+Thời gian nối chuỗi của lớp StringBuffer: 1ms**

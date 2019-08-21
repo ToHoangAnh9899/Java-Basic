@@ -24,6 +24,7 @@ public static void main(String[] args) {
 }
 ```
 Kết quả sau khi biên dịch chương trình:
+
 *Chuỗi rồng có giá trị =
 Chuỗi 2 có giá trị = Welcom*
 
@@ -43,7 +44,8 @@ public static void main(String[] args) {
 }
 ```
 Kết quả sau khi biên dịch chương trình:
-*Welcome to Java!
+
+*Welcome to Java!*
 
 ## Các hàm xử lý chuỗi ký tự
 
@@ -71,6 +73,7 @@ public static void main(String[] args) {
 }
 ```
 Kết quar sau khi biên dịch chương trình
+
 *Nhập vào chuỗi bất kỳ từ bàn phím:
 hello
 Chuỗi hello có độ dài = 5*

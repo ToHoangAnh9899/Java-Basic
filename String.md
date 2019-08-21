@@ -107,7 +107,7 @@ Kết quả sau khi biên dịch chương trình:
 
 *Happy new year*
 
-###Hàm trả về một ký tự trong chuỗi.
+### Hàm trả về một ký tự trong chuỗi.
 
 **Lưu ý:** Một chuỗi là tập hợp các ký tự và ký tự đầu tiên trong chuỗi sẽ có chỉ số (index) là 0. Ví dụ: một chuỗi có chiều dài là 10 thì chỉ số của các ký tự trong chuỗi đó sẽ được đánh số từ 0 đến 9.
 
@@ -278,3 +278,32 @@ Kết quả sau khi biên dịch chương trình:
 ### Hàm tạo một chuỗi con từ vị trí index trong chuỗi cha
 
 **Cú pháp**
+
+```
+String chuoiCon = chuoiCha.substring(int beginIndex);
+String chuoiCon = chuoiCha.substring(int beginIndex, int endIndex);
+```
+**Chức năng:** Hàm sẽ tạo một chuỗi con từ vị trí có chỉ số là beginIndex trong chuỗi cha. Trong cú pháp thứ 2, thì hàm sẽ tạo một chuỗi con bắt đầu từ vị trí có chỉ số là beginIndex và kết thúc tại vị trí có chỉ số endIndex - 1 trong chuỗi cha.
+
+Ví dụ
+```
+public static void main(String[] args) {
+    String chuoiCha = new String("Welcome to Freetuts.net!");
+         
+    // tạo một chuỗi con từ vị trí 11 trong chuỗi string1
+    String chuoiCon1 = chuoiCha.substring(11);  // Freetuts.net!
+    System.out.println(chuoiCon1);
+         
+    /*
+     * tách một chuỗi con bắt đầu từ vị trí 11
+     * và kết thúc tại vị trí 19 trong chuỗi cha
+     */
+    String chuoiCon2 = chuoiCha.substring(11, 19);  // Freetuts
+    System.out.println(chuoiCon2);
+}
+```
+Kết quả sau khi biên dịch chương trình:
+
+*Freetuts.net!*
+
+*Freetuts*

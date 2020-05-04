@@ -29,20 +29,49 @@ package pedemo;
  *
  * @author To Hoang Anh
  */
+//nguyen thuy (int , char , double, float..)
+//doi tuong (String, StringBuilder, StringBuffer..)
 public class StringPE {
 
+    // to hoang anh
     public static String nomallyString(String str) {
-    // Add your code in here:
-
-    }
-    
-    // Fixed Do not edit anything here.
-    public static void main(String[] args) {
-    	System.out.println("OUTPUT:");
-        String str = "java is a general-purpose programming language that is class-based,object-oriented,And designed to have as few 		implementation dependencies as possible.It is intended to let application developers write once,Run anywhere";
+        String results = "";
+        //insert space after "." and ","
+        String strL = str.toLowerCase();
+        for (int i = 0; i < strL.length() - 1; i++) {
+            if (strL.charAt(i) == '.' && strL.charAt(i + 1) != ' ') {
+                results = strL.replaceAll("\\.", ". ");
+            }
+            if (strL.charAt(i) == ',' && strL.charAt(i + 1) != ' ') {
+                results = results.replaceAll("\\,", ", ");
+            }
+        }
+        StringBuilder builder = new StringBuilder(results);
         
+        for(int i = 0 ; i < builder.length()-2 ; i++ ){
+            if(builder.charAt(i) == '.'){
+                builder.setCharAt(i+2, Character.toUpperCase(builder.charAt(i+2)));
+            }
+        }
+        
+        results = builder.toString();
+        
+        
+        //uppercase first character
+        results = results.replaceFirst(results.charAt(0) + "", Character.toUpperCase(results.charAt(0)) + "");
+        //insert dot in last string
+        results += ".";
+
+        return results;
+    }
+
+    public static void main(String[] args) {
+        System.out.println("OUTPUT:");
+        String str = "java is a general-purpose programming language that is class-based,object-oriented,And designed to have as few.implementation dependencies as possible.it is intended to let application developers write once,Run anywhere";
+        System.out.println(nomallyString(str));
     }
 }
+
 
 ```
 

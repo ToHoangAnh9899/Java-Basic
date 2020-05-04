@@ -59,3 +59,47 @@ Test case 1
 Java is a general-purpose programming language that is class-based, object-oriented, and designed to have as few implementation dependencies as possible. It is intended to let application developers write once, run anywhere.
 ```
 <br />
+
+## Bài 2
+
+> **Nhập 1 chuỗi string sau đó đếm số lần xuất hiện của các kí tự, số lần xuất hiện của các từ có trong chuỗi nhập vào.**
+
+<br />
+
+Template:
+```java
+package counter;
+
+public class Counter {
+
+    public static void main(String[] args) {
+    // Add your code in here:
+    }
+    
+    // Fixed Do not edit anything here.
+    public void display() {
+    System.out.println("OUTPUT:");
+    // Add your code in here:
+    }
+
+    public void analyze(String content) {
+    // Add your code in here:
+    }
+}
+
+```
+
+<br />
+
+Màn hình kết quả chương trình:
+
+Test case 1
+```java
+Enter your content: 
+to hoang anh
+{anh=1, to=1, hoang=1}
+{a=2, t=1, g=1, h=2, n=2, o=2}
+BUILD SUCCESSFUL (total time: 3 seconds)
+```
+
+<br />

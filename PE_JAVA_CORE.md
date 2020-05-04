@@ -4,8 +4,7 @@
 
 ## Bài 1
 
-> **
-Cho đoạn string sau đây :
+> **Cho đoạn string sau đây :
 "java is a general-purpose programming language that is class-based,object-oriented,And designed
 to have as few implementation dependencies as possible.It is intended to let application developers write once,Run anywhere"
 **
